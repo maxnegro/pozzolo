@@ -4,14 +4,15 @@
     <thead>
     <tr>
         <th>Nome</th>
-        <th style="width: 2em;"></th>
+        <th style="width: 8em;"></th>
     </tr>
     </thead>
     <tbody>
     {{#each listaPannelli }}
         <tr>
             <td>{{nome}}</td>
-            <td><a href="{{pathFor 'vnc' panelID=_id}}"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span></a></td>
+            <td><a href="{{pathFor 'vnc' panelID=_id}}"><button class="btn btn-primary">Visualizza <span class="glyphicon glyphicon-play-circle"></span></button></a></td>
+<!--            <td><a href="{{pathFor 'vnc' panelID=_id}}"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span></a></td> -->
 <!--            <td><a href="/vnc/{{_id}}"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span></a></td> -->
         </tr>
     {{/each}}
