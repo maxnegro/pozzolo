@@ -1,7 +1,9 @@
 <template name="authenticatedNavigation">
   <ul class="nav navbar-nav">
-    <li class="{{currentRoute 'index'}}"><a href="{{pathFor 'index'}}">Index</a></li>
-    <li class="{{currentRoute 'dashboard'}}"><a href="{{pathFor 'dashboard'}}">Dashboard</a></li>
+    <li class="{{currentRoute 'index'}}"><a href="{{pathFor 'index'}}">Home</a></li>
+    {{#if isInRole 'admin' }}
+    <li class="{{currentRoute 'admin'}}"><a href="{{pathFor '/admin'}}">Amministrazione</a></li>
+    {{/if}}
   </ul>
   <ul class="nav navbar-nav navbar-right">
     <li class="dropdown">

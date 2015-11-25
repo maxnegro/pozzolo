@@ -1,0 +1,10 @@
+<template name="vnc">
+{{#if Template.subscriptionsReady}}
+  {{#with panel}}
+  <h2>{{nome}}</h2>
+  {{/with}}
+  {{> noVnc host=host port=port password=panel.password path=path localCursor=false width="1024" height="768" }}
+{{else}}
+  <p>Loading...</p>
+{{/if}}
+</template>
