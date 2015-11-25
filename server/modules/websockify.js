@@ -107,9 +107,9 @@ selectProtocol = function(protocols, callback) {
     }
 }
 
-console.log("WebSocket settings: ");
-console.log("    - proxying from " + source_host + ":" + source_port +
-            " to " + target_host + ":" + target_port);
+// console.log("WebSocket settings: ");
+// console.log("    - proxying from " + source_host + ":" + source_port +
+            // " to " + target_host + ":" + target_port);
 
 // Send an HTTP error response
 http_error = function (response, code, msg) {
@@ -133,10 +133,10 @@ Meteor.methods({
     check(panelID, String);
     var currentPanel = Pannelli.findOne({_id:panelID});
     if (currentPanel) {
-      if (typeof panelAddress[panelID] === 'undefined') {
+      // if (typeof panelAddress[panelID] === 'undefined') {
         panelAddress[panelID] = { host: currentPanel.host, port: currentPanel.port };
-      }
-      console.log(panelAddress);
+      // }
+      // console.log(panelAddress);
     }
   }
 });
