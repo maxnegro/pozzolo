@@ -18,6 +18,16 @@ Template.vnc.helpers({
   path: function() {
     return "/ws/" + FlowRouter.getParam('panelID');
   },
+  vncstate: function() {
+    return NoVnc.state.get().msg;
+  },
+  vnclabel: function() {
+    if (NoVnc.state.get().state == "normal") {
+      return "label-success";
+    } else {
+      return "label-default";
+    }
+  }
   // password: function() {
   //   return Session.get('password');
   // }
