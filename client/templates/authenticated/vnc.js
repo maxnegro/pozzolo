@@ -19,13 +19,18 @@ Template.vnc.helpers({
     return "/ws/" + FlowRouter.getParam('panelID');
   },
   vncstate: function() {
-    return NoVnc.state.get().msg;
+    var msg = NoVnc.state.get().msg;
+    if (msg) {
+      return msg;
+    } else {
+      return NoVnc.state.get().state;
+    }
   },
   vnclabel: function() {
-    if (NoVnc.state.get().state == "normal") {
-      return "label-success";
-    } else {
-      return "label-default";
+    switch (NoVnc.state.get().state) {
+      case "normal":        return "label-success";
+      case "disconnected":  return "label-warning";
+      default:              return "label-info";
     }
   }
   // password: function() {
