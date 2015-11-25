@@ -7,6 +7,8 @@ Template.index.onCreated( () => {
 
 Template.index.helpers( {
   listaPannelli: function() {
-    return Pannelli.find();
+    return Pannelli.find({}, {
+      sort: { nome: 1}
+    });
   }
 });
