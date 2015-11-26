@@ -19,7 +19,6 @@ meteorhacks:ssr
 standard-minifiers
 
 
-npm-container
 ecmascript
 digilord:faker
 kadira:flow-router
@@ -38,3 +37,6 @@ sach:flow-db-admin
 random
 arillo:flow-router-helpers
 jakozaur:novnc
+
+
+npm-container
