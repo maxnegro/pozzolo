@@ -25,12 +25,17 @@ Schemas.Pannelli = new SimpleSchema({
   "port": {
     type: String,
     label: "Porta VNC pannello",
-    // default: "5900"
+    defaultValue: "5900"
   },
   "password": {
     type: String,
     optional: true,
     label: "Password VNC pannello"
+  },
+  "enabled": {
+    type: Boolean,
+    label: "Abilitato",
+    defaultValue: true
   }
 });
 

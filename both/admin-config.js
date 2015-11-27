@@ -6,7 +6,8 @@ AdminConfig = {
       tableColumns: [
         { label: "Impianto", name: "nome" },
         { label: "IP", name: "host" },
-        { label: "Porta", name: "port" }
+        { label: "Porta", name: "port" },
+        { label: "Abilitato", name: "enabled", template: "boolean" }
       ]
     }
   }
