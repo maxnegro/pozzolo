@@ -34,6 +34,7 @@ authenticatedRoutes.route( '/vnc/:panelID', {
   // triggersExit: [vncExit]
 });
 
+
 function vncEnter(context) {
   var wsPath = Meteor.call('setupWsProxy', context.params.panelID, function(error, result) {
     if (error) {
@@ -46,3 +47,17 @@ function vncEnter(context) {
   // Meteor.call('closeWsProxy', context.params.panelID);
   // Session.delete("password");
 // }
+
+authenticatedRoutes.route( '/history/:panelID', {
+  name: 'history',
+  action: function(params) {
+    // var currentPanel = Pannelli.findOne({_id:params.panelID});
+    // if (currentPanel) {
+      BlazeLayout.render( 'default', {
+        yield: 'history'
+      });
+    // } else {
+    //   BlazeLayout.render( 'default', { yield: 'notFound' });
+    // }
+  }
+});
