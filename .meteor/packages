@@ -10,7 +10,6 @@ check
 audit-argument-checks
 themeteorchef:jquery-validation
 twbs:bootstrap
-browser-policy
 meteorhacks:npm
 
 
@@ -40,3 +39,5 @@ jakozaur:novnc
 
 
 npm-container
+pfafman:crossfilter
+d3js:d3
