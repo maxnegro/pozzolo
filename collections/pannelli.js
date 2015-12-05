@@ -18,6 +18,18 @@ Schemas.Pannelli = new SimpleSchema({
     type: String,
     label: "Impianto"
   },
+  name_sort: {
+    type: String,
+    optional: true,
+    autoValue: function() {
+      var name = this.field("nome");
+      if (name.isSet) {
+        return name.value.toLowerCase();
+      } else {
+        this.unset();
+      }
+    }
+  },
   "host": {
     type: String,
     label: "Indirizzo IP pannello"
