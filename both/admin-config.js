@@ -3,6 +3,7 @@ AdminConfig = {
     Pannelli: {
       color: 'green',
       icon: 'desktop',
+      omitFields: ['name_sort'],
       tableColumns: [
         { label: "Impianto", name: "nome" },
         { label: "IP", name: "host" },
